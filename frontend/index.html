@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .news-item h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .news-item a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .news-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Новости</h1>
+    <div>
+        <h2>Получить новости</h2>
+        <form id="getNewsForm">
+            <label>
+                День:
+                <input type="text" id="day" placeholder="01">
+            </label>
+            <label>
+                Месяц:
+                <input type="text" id="month" placeholder="01">
+            </label>
+            <label>
+                Год:
+                <input type="text" id="year" placeholder="2024">
+            </label>
+            <label>
+                Количество:
+                <input type="number" id="quantity" placeholder="10">
+            </label>
+            <button type="submit">Получить новости</button>
+        </form>
+    </div>
+    
+    <div>
+        <h2>Получить новости по категории</h2>
+        <form id="getNewsByCategoryForm">
+            <label>
+                День:
+                <input type="text" id="dayCategory" placeholder="01">
+            </label>
+            <label>
+                Месяц:
+                <input type="text" id="monthCategory" placeholder="01">
+            </label>
+            <label>
+                Год:
+                <input type="text" id="yearCategory" placeholder="2024">
+            </label>
+            <label>
+                Категория:
+                <select id="category">
+                    <option value="russia">Россия</option>
+                    <option value="world">Мир</option>
+                    <option value="ussr">Бывший СССР</option>
+                    <option value="economics">Экономика</option>
+                    <option value="forces">Силовые структуры</option>
+                    <option value="science">Наука и техника</option>
+                    <option value="sport">Спорт</option>
+                    <option value="culture">Культура</option>
+                    <option value="media">Интернет и СМИ</option>
+                    <option value="style">Стиль</option>
+                    <option value="travel">Путешествия</option>
+                    <option value="life">Ценности</option>
+                    <option value="realty">Недвижимость</option>
+                    <option value="wellness">Среда обитания</option>
+                </select>
+            </label>
+            <label>
+                Количество:
+                <input type="number" id="quantityCategory" placeholder="10">
+            </label>
+            <button type="submit">Получить новости</button>
+        </form>
+    </div>
+
+    <div>
+        <h2>Получить случайную новость</h2>
+        <button id="getRandomNewsButton">Получить случайную новость</button>
+    </div>
+
+    <div>
+        <h2>Получить самую свежую новость</h2>
+        <button id="getLastNewsButton">Получить самую свежую новость</button>
+    </div>
+
+    <div id="newsResults"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
